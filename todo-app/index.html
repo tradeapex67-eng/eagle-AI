@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eagle Tasks - To-Do List Application</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <svg class="eagle-logo-small" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="35" r="12" fill="#D4AF37"/>
+                        <circle cx="48" cy="34" r="3" fill="#FFFFFF"/>
+                        <path d="M 60 35 L 68 34 L 62 37 Z" fill="#D4AF37"/>
+                        <path d="M 45 45 Q 25 40 20 55 Q 22 50 45 50 Z" fill="#D4AF37"/>
+                        <path d="M 55 45 Q 75 40 80 55 Q 78 50 55 50 Z" fill="#D4AF37"/>
+                        <ellipse cx="50" cy="55" rx="8" ry="15" fill="#D4AF37"/>
+                        <path d="M 46 68 L 44 78 M 50 68 L 50 78 M 54 68 L 56 78" stroke="#D4AF37" stroke-width="1.5" fill="none"/>
+                    </svg>
+                    <h1>Eagle Tasks</h1>
+                </div>
+                <div class="header-stats">
+                    <div class="stat">
+                        <span class="stat-label">Total Tasks</span>
+                        <span class="stat-value" id="totalTasks">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Completed</span>
+                        <span class="stat-value completed" id="completedTasks">0</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="app-main">
+            <div class="container">
+                <!-- Input Section -->
+                <section class="input-section">
+                    <div class="input-wrapper">
+                        <input 
+                            type="text" 
+                            id="taskInput" 
+                            class="task-input" 
+                            placeholder="Add a new task..."
+                            autocomplete="off"
+                        >
+                        <select id="categorySelect" class="category-select">
+                            <option value="work">Work</option>
+                            <option value="personal">Personal</option>
+                            <option value="shopping">Shopping</option>
+                            <option value="health">Health</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <button id="addTaskBtn" class="btn-add">Add Task</button>
+                    </div>
+                </section>
+
+                <!-- Filter Section -->
+                <section class="filter-section">
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="active">Active</button>
+                        <button class="filter-btn" data-filter="completed">Completed</button>
+                    </div>
+                    <div class="search-box">
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            class="search-input" 
+                            placeholder="Search tasks..."
+                            autocomplete="off"
+                        >
+                    </div>
+                </section>
+
+                <!-- Task List Section -->
+                <section class="tasks-section">
+                    <div class="tasks-wrapper">
+                        <div id="tasksList" class="tasks-list">
+                            <!-- Tasks will be dynamically inserted here -->
+                        </div>
+                        <div id="emptyState" class="empty-state">
+                            <div class="empty-icon">📝</div>
+                            <p class="empty-message">No tasks yet. Add one to get started!</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Category Filter -->
+                <section class="category-filter-section">
+                    <h3>Filter by Category</h3>
+                    <div class="category-badges">
+                        <button class="category-badge active" data-category="all">All</button>
+                        <button class="category-badge" data-category="work">Work</button>
+                        <button class="category-badge" data-category="personal">Personal</button>
+                        <button class="category-badge" data-category="shopping">Shopping</button>
+                        <button class="category-badge" data-category="health">Health</button>
+                        <button class="category-badge" data-category="other">Other</button>
+                    </div>
+                </section>
+
+                <!-- Action Buttons -->
+                <section class="actions-section">
+                    <button id="clearCompletedBtn" class="btn-secondary">Clear Completed</button>
+                    <button id="deleteAllBtn" class="btn-danger">Delete All Tasks</button>
+                    <button id="exportBtn" class="btn-tertiary">Export Tasks</button>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>&copy; 2024 Eagle Tasks. All tasks stored locally in your browser.</p>
+        </footer>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <h2>Confirm Action</h2>
+            <p id="confirmMessage"></p>
+            <div class="modal-buttons">
+                <button id="confirmBtn" class="btn-confirm">Confirm</button>
+                <button id="cancelBtn" class="btn-cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="notificationToast" class="notification-toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
