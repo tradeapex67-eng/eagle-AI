@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eagle Pro Hub - Professional & Homeowner Marketplace</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <div class="logo-section">
+                    <svg class="eagle-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="35" r="12" fill="#D4AF37"/>
+                        <circle cx="48" cy="34" r="3" fill="#0A0A0A"/>
+                        <path d="M 60 35 L 68 34 L 62 37 Z" fill="#D4AF37"/>
+                        <path d="M 45 45 Q 25 40 20 55 Q 22 50 45 50 Z" fill="#D4AF37"/>
+                        <path d="M 55 45 Q 75 40 80 55 Q 78 50 55 50 Z" fill="#D4AF37"/>
+                        <ellipse cx="50" cy="55" rx="8" ry="15" fill="#D4AF37"/>
+                        <path d="M 46 68 L 44 78 M 50 68 L 50 78 M 54 68 L 56 78" stroke="#D4AF37" stroke-width="1.5" fill="none"/>
+                    </svg>
+                    <span class="logo-text">EAGLE PRO HUB</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#marketplace" class="nav-link">Marketplace</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#materials" class="nav-link">Materials</a>
+                </div>
+                <div class="nav-buttons">
+                    <span class="credits-display">💰 Credits: <span id="userCredits">0</span></span>
+                    <button class="btn-login" id="userTypeBtn">I'm a Pro</button>
+                    <button class="btn-primary" id="dashboardBtn">Dashboard</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Professional Services & Materials Marketplace</h1>
+                <p class="hero-subtitle">Professionals earn. Homeowners save. Everyone wins.</p>
+                <div class="hero-buttons">
+                    <button class="btn-large-primary" id="becomeProBtn">Become a Pro - Earn Now</button>
+                    <button class="btn-large-secondary" id="findServicesBtn">Find Services</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7 Income Streams Section -->
+    <section class="income-streams">
+        <div class="container">
+            <h2>🦅 7 Ways to Earn Massive Income</h2>
+            <div class="income-grid">
+                <div class="income-card">
+                    <div class="income-number">1</div>
+                    <h3>Sell Services</h3>
+                    <p>List your skills & expertise. Earn per job completed. Unlimited income potential.</p>
+                    <span class="income-badge">Unlimited</span>
+                </div>
+                <div class="income-card">
+                    <div class="income-number">2</div>
+                    <h3>Sell Materials</h3>
+                    <p>Sell tools, supplies & materials. Keep 80% of profit. Scale your inventory.</p>
+                    <span class="income-badge">High Margin</span>
+                </div>
+                <div class="income-card">
+                    <div class="income-number">3</div>
+                    <h3>Premium Plans</h3>
+                    <p>20 Credits - $20 | 40 Credits - $50 | 60 Credits - $80 | 150 Credits - $200/mo</p>
+                    <span class="income-badge">Recurring</span>
+                </div>
+                <div class="income-card">
+                    <div class="income-number">4</div>
+                    <h3>Referral Commission</h3>
+                    <p>Refer professionals. Earn 10% commission on their first year earnings.</p>
+                    <span class="income-badge">Passive</span>
+                </div>
+                <div class="income-card">
+                    <div class="income-number">5</div>
+                    <h3>Affiliate Products</h3>
+                    <p>Promote tools & equipment. Earn 15-25% commission per sale. No inventory needed.</p>
+                    <span class="income-badge">Passive</span>
+                </div>
+                <div class="income-card">
+                    <div class="income-number">6</div>
+                    <h3>Training & Courses</h3>
+                    <p>Create courses on your expertise. Earn recurring revenue. Set your own price.</p>
+                    <span class="income-badge">Scalable</span>
+                </div>
+                <div class="income-card">
+                    <div class="income-number">7</div>
+                    <h3>Premium Badge</h3>
+                    <p>Get 'Verified Pro' badge. Premium listing position. Higher visibility = More jobs.</p>
+                    <span class="income-badge">$99/year</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section class="pricing">
+        <div class="container">
+            <h2>Credit Plans - Choose Your Level</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <p class="price">$20 CAD</p>
+                    <p class="credits">20 Credits</p>
+                    <ul class="features">
+                        <li>✅ Post 2 jobs</li>
+                        <li>✅ Basic profile</li>
+                        <li>✅ 30 days access</li>
+                    </ul>
+                    <button class="btn-plan" data-credits="20" data-price="20">Get Started</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>Professional</h3>
+                    <p class="price">$50 CAD</p>
+                    <p class="credits">40 Credits</p>
+                    <ul class="features">
+                        <li>✅ Post 5 jobs</li>
+                        <li>✅ Enhanced profile</li>
+                        <li>✅ 60 days access</li>
+                        <li>✅ Priority support</li>
+                    </ul>
+                    <button class="btn-plan" data-credits="40" data-price="50">Get Started</button>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="badge">Most Popular</div>
+                    <h3>Premium</h3>
+                    <p class="price">$80 CAD</p>
+                    <p class="credits">60 Credits</p>
+                    <ul class="features">
+                        <li>✅ Post 10 jobs</li>
+                        <li>✅ Verified badge</li>
+                        <li>✅ 90 days access</li>
+                        <li>✅ Premium support</li>
+                        <li>✅ 5% bonus credits</li>
+                    </ul>
+                    <button class="btn-plan" data-credits="60" data-price="80">Get Started</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <p class="price">$200 CAD/month</p>
+                    <p class="credits">150 Credits Monthly</p>
+                    <ul class="features">
+                        <li>✅ Unlimited posts</li>
+                        <li>✅ Gold badge</li>
+                        <li>✅ Featured listing</li>
+                        <li>✅ 24/7 support</li>
+                        <li>✅ 10% bonus credits</li>
+                    </ul>
+                    <button class="btn-plan" data-credits="150" data-price="200">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketplace Section -->
+    <section class="marketplace" id="marketplace">
+        <div class="container">
+            <h2>Professional Marketplace</h2>
+            <div class="search-section">
+                <input type="text" id="searchInput" placeholder="Search services & materials..." class="search-input">
+                <select id="categoryFilter" class="filter-select">
+                    <option value="all">All Categories</option>
+                    <option value="services">Services</option>
+                    <option value="materials">Materials</option>
+                    <option value="plumbing">Plumbing</option>
+                    <option value="electrical">Electrical</option>
+                    <option value="carpentry">Carpentry</option>
+                </select>
+            </div>
+            <div id="marketplaceItems" class="items-grid"></div>
+        </div>
+    </section>
+
+    <!-- Professional Dashboard Modal -->
+    <div id="proModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Professional Dashboard</h2>
+            <div class="pro-tabs">
+                <button class="tab-btn active" data-tab="earnings">Earnings</button>
+                <button class="tab-btn" data-tab="services">My Services</button>
+                <button class="tab-btn" data-tab="materials">My Materials</button>
+                <button class="tab-btn" data-tab="create">Create New</button>
+            </div>
+            <div id="earnings" class="tab-content active">
+                <h3>💰 Your Earnings</h3>
+                <div class="earnings-summary">
+                    <div class="earning-card">
+                        <span>Total Earnings:</span>
+                        <strong id="totalEarnings">$0.00</strong>
+                    </div>
+                    <div class="earning-card">
+                        <span>Referral Bonus:</span>
+                        <strong id="referralBonus">$0.00</strong>
+                    </div>
+                    <div class="earning-card">
+                        <span>Affiliate Commission:</span>
+                        <strong id="affiliateEarnings">$0.00</strong>
+                    </div>
+                </div>
+            </div>
+            <div id="services" class="tab-content">
+                <h3>My Services</h3>
+                <div id="servicesList"></div>
+            </div>
+            <div id="materials" class="tab-content">
+                <h3>My Materials</h3>
+                <div id="materialsList"></div>
+            </div>
+            <div id="create" class="tab-content">
+                <h3>Create New Listing</h3>
+                <form id="createListingForm">
+                    <input type="text" placeholder="Title" id="listingTitle" required>
+                    <select id="listingType" required>
+                        <option value="service">Service</option>
+                        <option value="material">Material</option>
+                    </select>
+                    <select id="listingCategory" required>
+                        <option value="plumbing">Plumbing</option>
+                        <option value="electrical">Electrical</option>
+                        <option value="carpentry">Carpentry</option>
+                        <option value="painting">Painting</option>
+                    </select>
+                    <textarea placeholder="Description" id="listingDescription" required></textarea>
+                    <input type="number" placeholder="Price" id="listingPrice" required>
+                    <button type="submit" class="btn-primary">Create Listing</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Homeowner Dashboard Modal -->
+    <div id="homeownerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Homeowner Dashboard</h2>
+            <div class="homeowner-tabs">
+                <button class="tab-btn active" data-tab="saved">Saved Services</button>
+                <button class="tab-btn" data-tab="orders">My Orders</button>
+                <button class="tab-btn" data-tab="reviews">My Reviews</button>
+            </div>
+            <div id="saved" class="tab-content active">
+                <h3>Saved Services & Materials</h3>
+                <div id="savedList"></div>
+            </div>
+            <div id="orders" class="tab-content">
+                <h3>My Orders</h3>
+                <div id="ordersList"></div>
+            </div>
+            <div id="reviews" class="tab-content">
+                <h3>My Reviews</h3>
+                <div id="reviewsList"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>For Professionals</h4>
+                    <ul>
+                        <li><a href="#">Become a Pro</a></li>
+                        <li><a href="#">Pricing Plans</a></li>
+                        <li><a href="#">7 Ways to Earn</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>For Homeowners</h4>
+                    <ul>
+                        <li><a href="#">Find Services</a></li>
+                        <li><a href="#">Browse Materials</a></li>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Safety</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Eagle Pro Hub. Connecting Professionals with Homeowners. All tasks stored locally in your browser.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification Toast -->
+    <div id="notificationToast" class="notification-toast"></div>
+
+    <script src="marketplace.js"></script>
+</body>
+</html>
